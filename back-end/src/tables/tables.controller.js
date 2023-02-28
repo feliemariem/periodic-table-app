@@ -115,6 +115,18 @@ function hasCapacity(req, res, next) {
     });
 }
 
+function capacityIsNumber(req, res, next) {
+  let { capacity } = req.body.data;
+
+  if (capacity > 0 && Number.isInteger(capacity)) {
+    return next();
+  }
+  return next({
+    status: 400,
+    message: `Invalid capacity field. Capacity must be a positive integer greater than 0`,
+  });
+}
+
 async function tableIsOccupied(req, res, next) {
     if (!res.locals.table.reservation_id) {
         return next();
@@ -174,7 +186,7 @@ function validateCapacity(capacity) {
 }
 
 module.exports = {
-    create: [hasData, hasTableName, hasCapacity, asyncErrorBoundary(create)],
+    create: [hasData, hasTableName, hasCapacity, capacityIsNumber, asyncErrorBoundary(create)],
     update: [
         hasData,
         hasReservationId,
