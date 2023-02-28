@@ -1,4 +1,4 @@
-[Live App](https://periodic-table-app.onrender.com): https://periodic-table-app.onrender.com/dashboard
+[Live App](https://periodic-table-app.onrender.com)
 
 # Capstone: Restaurant Reservation System
 
