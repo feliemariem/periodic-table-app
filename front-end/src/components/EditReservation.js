@@ -99,6 +99,7 @@ function EditReservation() {
                         className="d-grid gap-2 mb-2"
                         onSubmit={(e) => handleSubmit(e)}
                     >
+                        
                         <h1>Edit Reservation</h1>
                         <ErrorAlert error={error} />
                         <div className="form-group">

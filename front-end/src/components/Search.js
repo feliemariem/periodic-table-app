@@ -182,6 +182,7 @@ function Search() {
             </tr>
         );
     });
+    
 
     return (
         <div className="container">
@@ -192,7 +193,7 @@ function Search() {
                 <h1>Search</h1>
                 <ErrorAlert error={error} />
                 <div className="form-group">
-                    <label>Mobile Number:</label>
+                    <label><h6>Mobile Number:</h6></label>
                     <input
                         id="mobile_number"
                         name="mobile_number"
@@ -206,7 +207,7 @@ function Search() {
                         required
                     />
                 </div>
-                <button className="btn btn-primary" type="submit">
+                <button className="btn1 btn-primary" type="submit">
                     Find
                 </button>
             </form>

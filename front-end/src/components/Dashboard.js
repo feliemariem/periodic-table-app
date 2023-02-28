@@ -137,7 +137,7 @@ function Dashboard({ today }) {
                         },
                     }}
                     type="button"
-                    className="btn btn-light btn-sm"
+                    className="btn btn btn-sm"
                 >
                     Seat
                 </Link>
@@ -273,31 +273,39 @@ function Dashboard({ today }) {
                             onChange={(e) => handleChange(e)}
                             required
                         />
+                        
                     </div>
                     <div className="btn-group">
+                    <div className="item centered">
+                      <div className="item-centered">
                         <button
                             type="button"
-                            className="btn btn-outline-light"
+                            className="btn1 btn-info btn-sm mb-3"
                             onClick={() => handlePrevious()}
                         >
                             Previous
+                            
                         </button>
+                        
+
                         <button
                             type="button"
-                            className="btn btn-outline-light"
+                            className="btn1 btn-info btn-sm mb-3"
                             onClick={() => handleCurrent()}
                         >
                             Today
                         </button>
                         <button
                             type="button"
-                            className="btn btn-outline-light"
+                            className="btn1 btn-info btn-sm mb-3"
                             onClick={() => handleNext()}
                         >
                             Next
                         </button>
+                        </div>
                     </div>
-                    <table className="table table-striped table-dark align-middle">
+                    </div>
+                    <table className="table table-striped table-light align-middle">
                         <thead>
                             <tr>
                                 <th
@@ -331,13 +339,14 @@ function Dashboard({ today }) {
                                     className="d-none d-md-table-cell"
                                     scope="col"
                                 >
-                                    Edit
+                                  Edit
                                 </th>
                                 <th scope="col">Cancel</th>
                             </tr>
                         </thead>
                         <tbody>{reservationRows}</tbody>
                     </table>
+                    
                     <h4>Tables</h4>
                     <table className="table table-striped table-dark align-middle">
                         <thead>

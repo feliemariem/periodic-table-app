@@ -1,6 +1,8 @@
 import React from "react";
 import Menu from "./Menu";
 import Routes from "./Routes";
+import Footer from "./Footer";
+
 
 import "./Layout.css";
 
@@ -17,9 +19,11 @@ function Layout() {
       <div className="row h-100">
         <div className="col-md-2 side-bar">
           <Menu />
+
         </div>
         <div className="col">
           <Routes />
+          <Footer />
         </div>
       </div>
     </div>
