@@ -1,6 +1,7 @@
-[Live App](https://periodic-table-app.onrender.com)
+[Live App-Backend](https://periodic-table-app-backend.onrender.com)
+[Live App-Frontend](https://periodic-table-app-frontend.onrender.com/dashboard)
 
-# [Capstone: Restaurant Reservation System](https://periodic-table-app.onrender.com/dashboard)
+# Capstone: Restaurant Reservation System
 
 > You have been hired as a full stack developer at _Periodic Tables_, a startup that is creating a reservation system for fine dining restaurants.
 > The software is used only by restaurant personnel when a customer calls to request a reservation.
