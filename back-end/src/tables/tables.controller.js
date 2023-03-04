@@ -116,16 +116,22 @@ function hasCapacity(req, res, next) {
 }
 
 function capacityIsNumber(req, res, next) {
-  let { capacity } = req.body.data;
-
-  if (capacity > 0 && Number.isInteger(capacity)) {
-    return next();
+    const { data: { capacity } = {} } = req.body;
+       if (capacity <= 0) {
+        return next({
+            status: 400,
+            message: `capacity must be greater than 0`
+        })
+    }
+    if (typeof capacity !== 'number') {
+        return next({
+            status: 400,
+            message: `capacity must be a number`
+        })
+    }
+      next();
   }
-  return next({
-    status: 400,
-    message: `Invalid capacity field. Capacity must be a positive integer greater than 0`,
-  });
-}
+
 
 async function tableIsOccupied(req, res, next) {
     if (!res.locals.table.reservation_id) {
