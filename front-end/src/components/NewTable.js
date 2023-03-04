@@ -24,10 +24,11 @@ function NewTable() {
 
     async function handleSubmit(e) {
         e.preventDefault();
+        const newFormData = {...formData, capacity:Number(formData.capacity)}
         try {
             const abortController = new AbortController();
             const response = await createTable(
-                { ...formData },
+                newFormData,
                 abortController.signal
             );
             history.push(`/`);
@@ -86,7 +87,8 @@ function NewTable() {
                     Cancel
                 </button>
             </form>
-        </div>
+            </div>
+        
     );
 }
 
